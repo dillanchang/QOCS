@@ -1,0 +1,1763 @@
+commit d10e74fe446466513f058eee34d4f50c0ae8967b
+Merge: 7925f56 014fe4b
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sat Dec 3 17:07:42 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 7925f5648060025ea7a3eeca9018cd0fdc03e715
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sat Dec 3 17:07:26 2016 -0500
+
+    added more specs for gate.ml
+
+ README.txt      | 8 ++++----
+ gate.ml         | 8 ++++++++
+ saved_gates.txt | 1 -
+ state.ml        | 5 ++---
+ 4 files changed, 14 insertions(+), 8 deletions(-)
+
+commit 014fe4bb4c7d63097dcc8a2104a553cee7a9c21f
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sat Dec 3 16:25:19 2016 -0500
+
+    Specs for is_prime
+
+ _build/_digests               |  28 ---
+ _build/_log                   |  40 ----
+ _build/arithmetic.cmi         | Bin 1097 -> 0 bytes
+ _build/arithmetic.cmo         | Bin 13243 -> 0 bytes
+ _build/arithmetic.ml          |  75 -------
+ _build/arithmetic.ml.depends  |   1 -
+ _build/arithmetic.mli         |  39 ----
+ _build/arithmetic.mli.depends |   1 -
+ _build/gate.cmi               | Bin 764 -> 0 bytes
+ _build/gate.cmo               | Bin 74662 -> 0 bytes
+ _build/gate.ml                | 441 -------------------------------------
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  53 -----
+ _build/gate.mli.depends       |   1 -
+ _build/main.byte              | Bin 2045187 -> 0 bytes
+ _build/main.cmi               | Bin 2860 -> 0 bytes
+ _build/main.cmo               | Bin 72662 -> 0 bytes
+ _build/main.ml                | 489 ------------------------------------------
+ _build/main.ml.depends        |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/shor.cmi               | Bin 443 -> 0 bytes
+ _build/shor.cmo               | Bin 44769 -> 0 bytes
+ _build/shor.ml                | 269 -----------------------
+ _build/shor.ml.depends        |   1 -
+ _build/shor.mli               |  18 --
+ _build/shor.mli.depends       |   1 -
+ _build/state.cmi              | Bin 1173 -> 0 bytes
+ _build/state.cmo              | Bin 26000 -> 0 bytes
+ _build/state.ml               | 142 ------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  55 -----
+ _build/state.mli.depends      |   1 -
+ main.byte                     |   1 -
+ shor.ml                       |   1 +
+ 34 files changed, 1 insertion(+), 1660 deletions(-)
+
+commit 878f705348675e418d7db28e9bfda440fd3f5f96
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sat Dec 3 16:22:24 2016 -0500
+
+    Shor fails on -1
+
+ _build/_digests               |  28 +++
+ _build/_log                   |  40 ++++
+ _build/arithmetic.cmi         | Bin 0 -> 1097 bytes
+ _build/arithmetic.cmo         | Bin 0 -> 13243 bytes
+ _build/arithmetic.ml          |  75 +++++++
+ _build/arithmetic.ml.depends  |   1 +
+ _build/arithmetic.mli         |  39 ++++
+ _build/arithmetic.mli.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 764 bytes
+ _build/gate.cmo               | Bin 0 -> 74662 bytes
+ _build/gate.ml                | 441 +++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  53 +++++
+ _build/gate.mli.depends       |   1 +
+ _build/main.byte              | Bin 0 -> 2045187 bytes
+ _build/main.cmi               | Bin 0 -> 2860 bytes
+ _build/main.cmo               | Bin 0 -> 72662 bytes
+ _build/main.ml                | 489 ++++++++++++++++++++++++++++++++++++++++++
+ _build/main.ml.depends        |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/shor.cmi               | Bin 0 -> 443 bytes
+ _build/shor.cmo               | Bin 0 -> 44769 bytes
+ _build/shor.ml                | 269 +++++++++++++++++++++++
+ _build/shor.ml.depends        |   1 +
+ _build/shor.mli               |  18 ++
+ _build/shor.mli.depends       |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 26000 bytes
+ _build/state.ml               | 142 ++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 +++++
+ _build/state.mli.depends      |   1 +
+ main.byte                     |   1 +
+ shor.ml                       |   3 +-
+ 34 files changed, 1662 insertions(+), 1 deletion(-)
+
+commit 5b91f972fb1530c339644681d2fe2051723e797e
+Merge: 588f484 d0be95e
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sat Dec 3 16:11:26 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 588f4842c42c39855b76d8877b4f33f377a031ac
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sat Dec 3 16:11:12 2016 -0500
+
+    Moved precondition for factor to shor.mli
+
+ shor.ml  | 2 +-
+ shor.mli | 4 +++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+commit d0be95e9bc8bd761efc039f340b7eb026c7248e3
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sat Dec 3 16:11:08 2016 -0500
+
+    Removed test.ml
+
+ .DS_Store       | Bin 6148 -> 0 bytes
+ .ocamlinit      |  10 ----------
+ .test.ml.swp    | Bin 20480 -> 0 bytes
+ saved_gates.txt |   2 +-
+ test.ml         |  28 ----------------------------
+ 5 files changed, 1 insertion(+), 39 deletions(-)
+
+commit 80300721cf9a9c40199211d283d33a7713e114f5
+Merge: 9d5cbd4 44d66f2
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Sat Dec 3 16:06:58 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 9d5cbd4e18dcfc9a5ac2d95f9115370f05f6c261
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Sat Dec 3 16:06:20 2016 -0500
+
+    Modified states to print only up to 3 decimal places
+
+ main.ml         | 13 +++++++++++--
+ saved_gates.txt |  1 +
+ state.ml        | 15 ++++++++++-----
+ 3 files changed, 22 insertions(+), 7 deletions(-)
+
+commit 44d66f268c5636e905ede10052fb2cbf9bf0e209
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sat Dec 3 11:17:00 2016 -0500
+
+    Started test.ml
+
+ _build/_digests                           |  28 --
+ _build/_log                               |  40 ---
+ _build/arithmetic.cmi                     | Bin 1097 -> 0 bytes
+ _build/arithmetic.cmo                     | Bin 13274 -> 0 bytes
+ _build/arithmetic.ml                      |  75 -----
+ _build/arithmetic.ml.depends              |   1 -
+ _build/arithmetic.mli                     |  39 ---
+ _build/arithmetic.mli.depends             |   1 -
+ _build/gate.cmi                           | Bin 764 -> 0 bytes
+ _build/gate.cmo                           | Bin 74693 -> 0 bytes
+ _build/gate.ml                            | 441 ------------------------------
+ _build/gate.ml.depends                    |   1 -
+ _build/gate.mli                           |  53 ----
+ _build/gate.mli.depends                   |   1 -
+ _build/oUnit-QOCS Test Suite-Gauss#00.log |  30 --
+ _build/ocamlc.where                       |   1 -
+ _build/shor.cmi                           | Bin 443 -> 0 bytes
+ _build/shor.cmo                           | Bin 44605 -> 0 bytes
+ _build/shor.ml                            | 268 ------------------
+ _build/shor.ml.depends                    |   1 -
+ _build/shor.mli                           |  16 --
+ _build/shor.mli.depends                   |   1 -
+ _build/state.cmi                          | Bin 1173 -> 0 bytes
+ _build/state.cmo                          | Bin 25028 -> 0 bytes
+ _build/state.ml                           | 137 ----------
+ _build/state.ml.depends                   |   1 -
+ _build/state.mli                          |  55 ----
+ _build/state.mli.depends                  |   1 -
+ _build/test.byte                          | Bin 2794718 -> 0 bytes
+ _build/test.cmi                           | Bin 1329 -> 0 bytes
+ _build/test.cmo                           | Bin 3423 -> 0 bytes
+ _build/test.ml                            |  28 --
+ _build/test.ml.depends                    |   1 -
+ test.byte                                 |   1 -
+ 34 files changed, 1221 deletions(-)
+
+commit 3c0bd679deec41ce2ca69e71751e9507955fda00
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sat Dec 3 11:16:48 2016 -0500
+
+    Started test.ml
+
+ .test.ml.swp                              | Bin 0 -> 20480 bytes
+ Makefile                                  |   3 +
+ _build/_digests                           |  28 ++
+ _build/_log                               |  40 +++
+ _build/arithmetic.cmi                     | Bin 0 -> 1097 bytes
+ _build/arithmetic.cmo                     | Bin 0 -> 13274 bytes
+ _build/arithmetic.ml                      |  75 +++++
+ _build/arithmetic.ml.depends              |   1 +
+ _build/arithmetic.mli                     |  39 +++
+ _build/arithmetic.mli.depends             |   1 +
+ _build/gate.cmi                           | Bin 0 -> 764 bytes
+ _build/gate.cmo                           | Bin 0 -> 74693 bytes
+ _build/gate.ml                            | 441 ++++++++++++++++++++++++++++++
+ _build/gate.ml.depends                    |   1 +
+ _build/gate.mli                           |  53 ++++
+ _build/gate.mli.depends                   |   1 +
+ _build/oUnit-QOCS Test Suite-Gauss#00.log |  30 ++
+ _build/ocamlc.where                       |   1 +
+ _build/shor.cmi                           | Bin 0 -> 443 bytes
+ _build/shor.cmo                           | Bin 0 -> 44605 bytes
+ _build/shor.ml                            | 268 ++++++++++++++++++
+ _build/shor.ml.depends                    |   1 +
+ _build/shor.mli                           |  16 ++
+ _build/shor.mli.depends                   |   1 +
+ _build/state.cmi                          | Bin 0 -> 1173 bytes
+ _build/state.cmo                          | Bin 0 -> 25028 bytes
+ _build/state.ml                           | 137 ++++++++++
+ _build/state.ml.depends                   |   1 +
+ _build/state.mli                          |  55 ++++
+ _build/state.mli.depends                  |   1 +
+ _build/test.byte                          | Bin 0 -> 2794718 bytes
+ _build/test.cmi                           | Bin 0 -> 1329 bytes
+ _build/test.cmo                           | Bin 0 -> 3423 bytes
+ _build/test.ml                            |  28 ++
+ _build/test.ml.depends                    |   1 +
+ test.byte                                 |   1 +
+ test.ml                                   |  28 ++
+ 37 files changed, 1252 insertions(+)
+
+commit 61fd587f148067b529d881550cb6d72b38d78a65
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sat Dec 3 11:06:24 2016 -0500
+
+    added comments for gate.ml
+
+ Makefile |  2 +-
+ gate.ml  | 14 ++++++++++++++
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+commit 0e21e61cef2740a288edb703e64614e6aeebbae6
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Dec 1 11:54:28 2016 -0500
+
+    Checks if input is prime
+
+ shor.ml | 19 +++++++++++++++++--
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+
+commit 6a02a4ff611d932e936853492ecb01bda5b2e243
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Dec 1 09:06:50 2016 -0500
+
+    Added qft_gate to Shor.mli
+
+ shor.mli | 21 +++++++++++++++------
+ 1 file changed, 15 insertions(+), 6 deletions(-)
+
+commit 55c71a5c0ed6829b93963fe484718ec7ad9d2cfe
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Dec 1 08:59:38 2016 -0500
+
+    Factored out Arithmetic functions
+
+ _build/_digests               |  28 ---
+ _build/_log                   |  40 ----
+ _build/arithmetic.cmi         | Bin 1097 -> 0 bytes
+ _build/arithmetic.cmo         | Bin 13243 -> 0 bytes
+ _build/arithmetic.ml          |  75 -------
+ _build/arithmetic.ml.depends  |   1 -
+ _build/arithmetic.mli         |  39 ----
+ _build/arithmetic.mli.depends |   1 -
+ _build/gate.cmi               | Bin 764 -> 0 bytes
+ _build/gate.cmo               | Bin 74662 -> 0 bytes
+ _build/gate.ml                | 427 --------------------------------------
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  53 -----
+ _build/gate.mli.depends       |   1 -
+ _build/main.byte              | Bin 2038661 -> 0 bytes
+ _build/main.cmi               | Bin 2860 -> 0 bytes
+ _build/main.cmo               | Bin 68875 -> 0 bytes
+ _build/main.ml                | 466 ------------------------------------------
+ _build/main.ml.depends        |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/shor.cmi               | Bin 267 -> 0 bytes
+ _build/shor.cmo               | Bin 42251 -> 0 bytes
+ _build/shor.ml                | 253 -----------------------
+ _build/shor.ml.depends        |   1 -
+ _build/shor.mli               |   7 -
+ _build/shor.mli.depends       |   1 -
+ _build/state.cmi              | Bin 1173 -> 0 bytes
+ _build/state.cmo              | Bin 24997 -> 0 bytes
+ _build/state.ml               | 137 -------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  55 -----
+ _build/state.mli.depends      |   1 -
+ main.byte                     |   1 -
+ 33 files changed, 1591 deletions(-)
+
+commit 430855531b4b2999e33f919ba19087d58402b959
+Merge: ee878e3 a51ea43
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Dec 1 08:58:42 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit ee878e3fcc5ab93e5a4c400e39d570d0160e7942
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Dec 1 08:58:14 2016 -0500
+
+    Factored out Arithmetic functions
+
+ _build/_digests               |  28 +++
+ _build/_log                   |  40 ++++
+ _build/arithmetic.cmi         | Bin 0 -> 1097 bytes
+ _build/arithmetic.cmo         | Bin 0 -> 13243 bytes
+ _build/arithmetic.ml          |  75 +++++++
+ _build/arithmetic.ml.depends  |   1 +
+ _build/arithmetic.mli         |  39 ++++
+ _build/arithmetic.mli.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 764 bytes
+ _build/gate.cmo               | Bin 0 -> 74662 bytes
+ _build/gate.ml                | 427 ++++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  53 +++++
+ _build/gate.mli.depends       |   1 +
+ _build/main.byte              | Bin 0 -> 2038661 bytes
+ _build/main.cmi               | Bin 0 -> 2860 bytes
+ _build/main.cmo               | Bin 0 -> 68875 bytes
+ _build/main.ml                | 466 ++++++++++++++++++++++++++++++++++++++++++
+ _build/main.ml.depends        |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/shor.cmi               | Bin 0 -> 267 bytes
+ _build/shor.cmo               | Bin 0 -> 42251 bytes
+ _build/shor.ml                | 253 +++++++++++++++++++++++
+ _build/shor.ml.depends        |   1 +
+ _build/shor.mli               |   7 +
+ _build/shor.mli.depends       |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 24997 bytes
+ _build/state.ml               | 137 +++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 +++++
+ _build/state.mli.depends      |   1 +
+ gate.ml                       |  96 ++-------
+ main.byte                     |   1 +
+ 34 files changed, 1605 insertions(+), 82 deletions(-)
+
+commit a51ea43b9b6d940f950fa9a2c1a87274242fd2be
+Merge: 3d72691 d61d9ae
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Thu Dec 1 02:19:37 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 3d72691e81f99ebbe86f0cc7ccf86a39106ce7a5
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Thu Dec 1 02:17:43 2016 -0500
+
+    Multi colour QOCS. Fixed issue of tensor producting previous gates
+
+ main.ml | 28 +++++++++++++++++++++-------
+ 1 file changed, 21 insertions(+), 7 deletions(-)
+
+commit d61d9aef290f5d5ddb3a7a8f0e1a4e09c6108480
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Dec 1 00:51:52 2016 -0500
+
+    Shor now prints useful statements
+
+ shor.ml | 100 ++++++++++++++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 66 insertions(+), 34 deletions(-)
+
+commit a8564cf351594eff881eff426bacdf4f99471100
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Dec 1 00:50:41 2016 -0500
+
+    Finished module and mli
+
+ arithmetic.ml  | 26 ++++++++++++++++++++++----
+ arithmetic.mli | 38 +++++++++++++++++++++++++++++++-------
+ 2 files changed, 53 insertions(+), 11 deletions(-)
+
+commit 04d02a9c20e8a88858fbe3c20bf535f73d767bcd
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 23:25:08 2016 -0500
+
+    Edited style for state.ml and main.ml. Allowed user to view current circuits in state application mode
+
+ main.ml  |  17 ++++++--
+ state.ml | 133 +++++++++++++++++++++++++++++++--------------------------------
+ 2 files changed, 80 insertions(+), 70 deletions(-)
+
+commit ad2988e9a85527319e1758654f893f0018b728ad
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 22:40:16 2016 -0500
+
+    Minor bug fixes in REPL
+
+ main.ml         | 71 +++++++++++++++++++++++++++++++++++----------------------
+ saved_gates.txt |  1 -
+ 2 files changed, 44 insertions(+), 28 deletions(-)
+
+commit 1b6bcaf58e90f7fdbdb681de1c2a7f71750266f6
+Merge: cdf01d1 e3455cb
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 21:47:57 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit cdf01d1f679cc60f882df7898729b9c8e95b9a28
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 21:46:24 2016 -0500
+
+    Asked user whether or not they want to save gates. Made instructions clear.
+
+ main.ml         | 200 ++++++++++++++++++++++++++++++++------------------------
+ saved_gates.txt |   2 +
+ 2 files changed, 117 insertions(+), 85 deletions(-)
+
+commit e3455cbb5a05118e29629da46d11cbd59b7901d6
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 30 21:44:57 2016 -0500
+
+    fixed val_string for small values
+
+ .state.ml.swp | Bin 16384 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1cc4b6fd9c9c006eb6c50f5d674ad6e1d9cccb8c
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 30 21:44:44 2016 -0500
+
+    fixed val_string
+
+ .state.ml.swp | Bin 0 -> 16384 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit bdc0cf7404f587dd3daacf10859da167099e0261
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 30 18:29:29 2016 -0500
+
+    Fixed val_string and normalization with u
+
+ gate.ml         | 5 ++---
+ saved_gates.txt | 6 ++++--
+ state.ml        | 5 ++++-
+ 3 files changed, 10 insertions(+), 6 deletions(-)
+
+commit 1ac78f11971a4609b3c42e8178ff74e583032a2c
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 30 17:54:20 2016 -0500
+
+    Started README.txt
+
+ .README.txt.swp | Bin 12288 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 616d5a40167d212e8e0ea88f1b57665031785325
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 30 17:54:15 2016 -0500
+
+    Started README.txt
+
+ .README.txt.swp | Bin 0 -> 12288 bytes
+ README.md       |   2 --
+ README.txt      |  62 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ saved_gates.txt |   2 ++
+ 4 files changed, 64 insertions(+), 2 deletions(-)
+
+commit fd5ee325551e440ec2c844b044f1c56b3ccd8cc0
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 17:05:20 2016 -0500
+
+    Adjusted Makefile and deleted non required files
+
+ .gate.ml.swp    | Bin 36864 -> 0 bytes
+ .gate.mli.swp   | Bin 12288 -> 0 bytes
+ .ocamlinit      |   2 -
+ .ocamlinit.swp  | Bin 12288 -> 0 bytes
+ Makefile        |  15 +--
+ ast.ml          |  13 --
+ dillan_main.ml  |   2 -
+ gate_alex.ml    | 340 ----------------------------------------------
+ grover.mli      |   6 -
+ keshav_main.ml  | 408 --------------------------------------------------------
+ main.ml         | 408 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ saved_gates.txt |   2 -
+ state_alex.ml   | 132 ------------------
+ state_alex.mli  |  55 --------
+ 14 files changed, 411 insertions(+), 972 deletions(-)
+
+commit e27889f9a84b7b86575f6eb974af684435887894
+Merge: 2863ec3 f48b04c
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 16:17:41 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 2863ec3f8761aa7413c64a9505baa5bb389574c7
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 16:17:07 2016 -0500
+
+    Minor colour changes in REPL
+
+ .ocamlinit      |  1 +
+ Makefile        |  2 +-
+ keshav_main.ml  | 45 ++++++++++++++++++++++++---------------------
+ saved_gates.txt |  2 ++
+ 4 files changed, 28 insertions(+), 22 deletions(-)
+
+commit f48b04cb558bda62c27f2400107438bd83c89f1b
+Author: Ubuntu <ubuntu@csvm>
+Date:   Wed Nov 30 16:16:10 2016 -0500
+
+    Cleaned
+
+ _build/_digests               |  35 ---
+ _build/_log                   |  40 ----
+ _build/arithmetic.byte        | Bin 1591173 -> 0 bytes
+ _build/arithmetic.cmi         | Bin 1095 -> 0 bytes
+ _build/arithmetic.cmo         | Bin 10834 -> 0 bytes
+ _build/arithmetic.ml          |  57 -----
+ _build/arithmetic.ml.depends  |   1 -
+ _build/arithmetic.mli         |  15 --
+ _build/arithmetic.mli.depends |   1 -
+ _build/dillan_main.byte       | Bin 1698032 -> 0 bytes
+ _build/dillan_main.cmi        | Bin 275 -> 0 bytes
+ _build/dillan_main.cmo        | Bin 1543 -> 0 bytes
+ _build/dillan_main.ml         |   2 -
+ _build/dillan_main.ml.depends |   1 -
+ _build/gate.cmi               | Bin 764 -> 0 bytes
+ _build/gate.cmo               | Bin 84187 -> 0 bytes
+ _build/gate.ml                | 496 ------------------------------------------
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  53 -----
+ _build/gate.mli.depends       |   1 -
+ _build/keshav_main.byte       | Bin 2009759 -> 0 bytes
+ _build/keshav_main.cmi        | Bin 2599 -> 0 bytes
+ _build/keshav_main.cmo        | Bin 59146 -> 0 bytes
+ _build/keshav_main.ml         | 405 ----------------------------------
+ _build/keshav_main.ml.depends |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/shor.byte              | Bin 1748449 -> 0 bytes
+ _build/shor.cmi               | Bin 267 -> 0 bytes
+ _build/shor.cmo               | Bin 43508 -> 0 bytes
+ _build/shor.ml                | 276 -----------------------
+ _build/shor.ml.depends        |   1 -
+ _build/shor.mli               |   7 -
+ _build/shor.mli.depends       |   1 -
+ _build/state.cmi              | Bin 1173 -> 0 bytes
+ _build/state.cmo              | Bin 24631 -> 0 bytes
+ _build/state.ml               | 135 ------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  55 -----
+ _build/state.mli.depends      |   1 -
+ arithmetic.byte               |   1 -
+ dillan_main.byte              |   1 -
+ keshav_main.byte              |   1 -
+ shor.byte                     |   1 -
+ 43 files changed, 1591 deletions(-)
+
+commit c09c4c933d9a51146cc3194d532892b6903c858f
+Author: Ubuntu <ubuntu@csvm>
+Date:   Wed Nov 30 16:15:05 2016 -0500
+
+    Factored out arithmetic.ml
+
+ .ocamlinit                    |   1 +
+ Makefile                      |   3 +
+ _build/_digests               |  35 +++
+ _build/_log                   |  40 ++++
+ _build/arithmetic.byte        | Bin 0 -> 1591173 bytes
+ _build/arithmetic.cmi         | Bin 0 -> 1095 bytes
+ _build/arithmetic.cmo         | Bin 0 -> 10834 bytes
+ _build/arithmetic.ml          |  57 +++++
+ _build/arithmetic.ml.depends  |   1 +
+ _build/arithmetic.mli         |  15 ++
+ _build/arithmetic.mli.depends |   1 +
+ _build/dillan_main.byte       | Bin 0 -> 1698032 bytes
+ _build/dillan_main.cmi        | Bin 0 -> 275 bytes
+ _build/dillan_main.cmo        | Bin 0 -> 1543 bytes
+ _build/dillan_main.ml         |   2 +
+ _build/dillan_main.ml.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 764 bytes
+ _build/gate.cmo               | Bin 0 -> 84187 bytes
+ _build/gate.ml                | 496 ++++++++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  53 +++++
+ _build/gate.mli.depends       |   1 +
+ _build/keshav_main.byte       | Bin 0 -> 2009759 bytes
+ _build/keshav_main.cmi        | Bin 0 -> 2599 bytes
+ _build/keshav_main.cmo        | Bin 0 -> 59146 bytes
+ _build/keshav_main.ml         | 405 ++++++++++++++++++++++++++++++++++
+ _build/keshav_main.ml.depends |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/shor.byte              | Bin 0 -> 1748449 bytes
+ _build/shor.cmi               | Bin 0 -> 267 bytes
+ _build/shor.cmo               | Bin 0 -> 43508 bytes
+ _build/shor.ml                | 276 +++++++++++++++++++++++
+ _build/shor.ml.depends        |   1 +
+ _build/shor.mli               |   7 +
+ _build/shor.mli.depends       |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 24631 bytes
+ _build/state.ml               | 135 ++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 +++++
+ _build/state.mli.depends      |   1 +
+ arithmetic.byte               |   1 +
+ arithmetic.mli                |  15 ++
+ dillan_main.byte              |   1 +
+ keshav_main.byte              |   1 +
+ shor.byte                     |   1 +
+ 46 files changed, 1610 insertions(+)
+
+commit ed99af133333132fa5fad22cb750081d6841015b
+Author: Ubuntu <ubuntu@csvm>
+Date:   Wed Nov 30 16:12:52 2016 -0500
+
+    Fixed some bugs in Shor. Still loops
+
+ shor.ml | 146 ++++++----------------------------------------------------------
+ 1 file changed, 12 insertions(+), 134 deletions(-)
+
+commit 3d885d312e7a79b4d685df92d84c664843a50cfa
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 01:57:06 2016 -0500
+
+    Nice touch to when the REPL ends. Improvements will be added though
+
+ keshav_main.ml  | 25 +++++++++++++------------
+ saved_gates.txt |  0
+ 2 files changed, 13 insertions(+), 12 deletions(-)
+
+commit 63048f7fed4bfd56e23d5fcdcd6130939f53a28f
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Wed Nov 30 01:18:31 2016 -0500
+
+    Enabled saving to external file. Yet to be tested.
+
+ keshav_main.ml | 98 ++++++++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 65 insertions(+), 33 deletions(-)
+
+commit baa1fd24b7bc308e63663d772a29f22452b60d1c
+Merge: e42513a 5c1cb1f
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Tue Nov 29 21:44:10 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit e42513afae464409a39b72ec03668d2f604409f0
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Tue Nov 29 21:42:26 2016 -0500
+
+    Working REPL with nice linebreaks. Only saving to external file + text colour remains.
+
+ .ocamlinit       |   5 +-
+ .ocamlinitKeshav |  11 ---
+ keshav_main.ml   | 275 ++++++++++++++++++++++++++++++++-----------------------
+ 3 files changed, 166 insertions(+), 125 deletions(-)
+
+commit 5c1cb1f29b488ce0c7ea1f8855096668af4fa6db
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Tue Nov 29 18:59:58 2016 -0500
+
+    Finished gate_to_string and string_to_gate
+
+ .gate.ml.swp   | Bin 0 -> 36864 bytes
+ .gate.mli.swp  | Bin 0 -> 12288 bytes
+ .ocamlinit     |   2 +-
+ .ocamlinit.swp | Bin 0 -> 12288 bytes
+ gate.ml        | 101 ++++++++++++++++++++++++++++++++++++++++++++++++++++++---
+ state.ml       |  10 +++---
+ 6 files changed, 103 insertions(+), 10 deletions(-)
+
+commit bbaedf4630cfe73d9dbca707431c0b2e62ed6c56
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Tue Nov 29 10:12:41 2016 -0500
+
+    Fixed Hadamard
+
+ .state.ml.swp | Bin 16384 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit d2b0b37b427868c5b877e39019a88e09eb96a539
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Tue Nov 29 10:12:26 2016 -0500
+
+    Fixed Hadamard
+
+ .gate.ml.swp  | Bin 24576 -> 0 bytes
+ .state.ml.swp | Bin 0 -> 16384 bytes
+ gate.ml       |  15 ++++++++++-----
+ 3 files changed, 10 insertions(+), 5 deletions(-)
+
+commit 3014360c8886d2ea96431d6a07b0e800d76ce856
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Mon Nov 28 23:39:21 2016 -0500
+
+    Added gate_to_string and string_to_gate
+
+ .gate.ml.swp | Bin 0 -> 24576 bytes
+ gate.ml      |  23 ++++++++---------------
+ gate.mli     |  13 ++++++-------
+ state.ml     |   1 +
+ 4 files changed, 15 insertions(+), 22 deletions(-)
+
+commit 9ea4ff5b4f4cb4e1bed99179500836452a48a0e7
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Mon Nov 28 23:28:54 2016 -0500
+
+    Updated keshav_main.ml
+
+ keshav_main.ml | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+
+commit 5d6426edef759a0c3c774e73d9edee73da5126eb
+Author: Ubuntu <ubuntu@csvm>
+Date:   Mon Nov 28 22:52:20 2016 -0500
+
+    Correctly factors 15
+
+ _build/_digests               |  26 ---
+ _build/_log                   |  32 ----
+ _build/arithmetic.cmi         | Bin 1094 -> 0 bytes
+ _build/arithmetic.cmo         | Bin 10834 -> 0 bytes
+ _build/arithmetic.ml          |  57 ------
+ _build/arithmetic.ml.depends  |   1 -
+ _build/dillan_main.byte       | Bin 1681939 -> 0 bytes
+ _build/dillan_main.cmi        | Bin 275 -> 0 bytes
+ _build/dillan_main.cmo        | Bin 1543 -> 0 bytes
+ _build/dillan_main.ml         |   2 -
+ _build/dillan_main.ml.depends |   1 -
+ _build/gate.cmi               | Bin 759 -> 0 bytes
+ _build/gate.cmo               | Bin 67502 -> 0 bytes
+ _build/gate.ml                | 407 ------------------------------------------
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  54 ------
+ _build/gate.mli.depends       |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/shor.byte              | Bin 1739285 -> 0 bytes
+ _build/shor.cmi               | Bin 267 -> 0 bytes
+ _build/shor.cmo               | Bin 50244 -> 0 bytes
+ _build/shor.ml                | 343 -----------------------------------
+ _build/shor.ml.depends        |   1 -
+ _build/shor.mli               |   7 -
+ _build/shor.mli.depends       |   1 -
+ _build/state.cmi              | Bin 1173 -> 0 bytes
+ _build/state.cmo              | Bin 23988 -> 0 bytes
+ _build/state.ml               | 132 --------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  55 ------
+ _build/state.mli.depends      |   1 -
+ dillan_main.byte              |   1 -
+ shor.byte                     |   1 -
+ 33 files changed, 1126 deletions(-)
+
+commit 411723527bba9a79b17ace408e14742b1fbd948b
+Author: Ubuntu <ubuntu@csvm>
+Date:   Mon Nov 28 22:51:19 2016 -0500
+
+    Correctly factors 15
+
+ _build/_digests               |  26 +++
+ _build/_log                   |  32 ++++
+ _build/arithmetic.cmi         | Bin 0 -> 1094 bytes
+ _build/arithmetic.cmo         | Bin 0 -> 10834 bytes
+ _build/arithmetic.ml          |  57 ++++++
+ _build/arithmetic.ml.depends  |   1 +
+ _build/dillan_main.byte       | Bin 0 -> 1681939 bytes
+ _build/dillan_main.cmi        | Bin 0 -> 275 bytes
+ _build/dillan_main.cmo        | Bin 0 -> 1543 bytes
+ _build/dillan_main.ml         |   2 +
+ _build/dillan_main.ml.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 759 bytes
+ _build/gate.cmo               | Bin 0 -> 67502 bytes
+ _build/gate.ml                | 407 ++++++++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  54 ++++++
+ _build/gate.mli.depends       |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/shor.byte              | Bin 0 -> 1739285 bytes
+ _build/shor.cmi               | Bin 0 -> 267 bytes
+ _build/shor.cmo               | Bin 0 -> 50244 bytes
+ _build/shor.ml                | 343 +++++++++++++++++++++++++++++++++++
+ _build/shor.ml.depends        |   1 +
+ _build/shor.mli               |   7 +
+ _build/shor.mli.depends       |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 23988 bytes
+ _build/state.ml               | 132 ++++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 ++++++
+ _build/state.mli.depends      |   1 +
+ dillan_main.byte              |   1 +
+ shor.byte                     |   1 +
+ shor.ml                       |   6 +-
+ 34 files changed, 1129 insertions(+), 3 deletions(-)
+
+commit f9857fcd37603796337beae1f5efa90e2f31e847
+Merge: 47ab089 f3f9c50
+Author: Ubuntu <ubuntu@csvm>
+Date:   Mon Nov 28 22:20:30 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 47ab089a7f4347898248247fea5f459120fb6415
+Author: Ubuntu <ubuntu@csvm>
+Date:   Mon Nov 28 22:19:06 2016 -0500
+
+    Reimplemented shor with recursion
+
+ shor.ml | 122 ++++++++++++++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 85 insertions(+), 37 deletions(-)
+
+commit f3f9c50b14b6f53575a266301294decaf53a67b1
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Mon Nov 28 21:38:04 2016 -0500
+
+    Allowing use of previously saved gates while building
+
+ keshav_main.ml | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+
+commit 57a33f72ec9cc966f52b9c5eb0fc58eeddab3e93
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sun Nov 27 23:13:50 2016 -0500
+
+    Added comments to all Shor and Gate functions
+
+ gate.ml | 39 ++++++++++++++++++++++++++++++++++-----
+ shor.ml | 47 +++++++++++++++++++++++++++++++++++++++++------
+ 2 files changed, 75 insertions(+), 11 deletions(-)
+
+commit 81086a2aad496d7442de9e9103b13a6f3706aa26
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sun Nov 27 22:39:32 2016 -0500
+
+    Made another .ocamlinit and fixed outof bounds error in shor
+
+ _build/_digests               |  30 ----
+ _build/_log                   |  32 ----
+ _build/arithmetic.cmi         | Bin 1094 -> 0 bytes
+ _build/arithmetic.cmo         | Bin 10834 -> 0 bytes
+ _build/arithmetic.ml          |  57 -------
+ _build/arithmetic.ml.depends  |   1 -
+ _build/dillan_main.byte       | Bin 1681033 -> 0 bytes
+ _build/dillan_main.cmi        | Bin 275 -> 0 bytes
+ _build/dillan_main.cmo        | Bin 1543 -> 0 bytes
+ _build/dillan_main.ml         |   2 -
+ _build/dillan_main.ml.depends |   1 -
+ _build/gate.cmi               | Bin 759 -> 0 bytes
+ _build/gate.cmo               | Bin 66581 -> 0 bytes
+ _build/gate.ml                | 379 ------------------------------------------
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  54 ------
+ _build/gate.mli.depends       |   1 -
+ _build/keshav_main.byte       | Bin 1726116 -> 0 bytes
+ _build/keshav_main.cmi        | Bin 1984 -> 0 bytes
+ _build/keshav_main.cmo        | Bin 50213 -> 0 bytes
+ _build/keshav_main.ml         | 314 ----------------------------------
+ _build/keshav_main.ml.depends |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/shor.byte              | Bin 1736988 -> 0 bytes
+ _build/shor.cmi               | Bin 267 -> 0 bytes
+ _build/shor.cmo               | Bin 48658 -> 0 bytes
+ _build/shor.ml                | 260 -----------------------------
+ _build/shor.ml.depends        |   1 -
+ _build/shor.mli               |   7 -
+ _build/shor.mli.depends       |   1 -
+ _build/state.cmi              | Bin 1173 -> 0 bytes
+ _build/state.cmo              | Bin 23988 -> 0 bytes
+ _build/state.ml               | 132 ---------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  55 ------
+ _build/state.mli.depends      |   1 -
+ dillan_main.byte              |   1 -
+ gate.ml                       |   1 -
+ keshav_main.byte              |   1 -
+ shor.byte                     |   1 -
+ 40 files changed, 1336 deletions(-)
+
+commit ff905d17cdb783a065986da6f962ba4cc835ed31
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sun Nov 27 22:39:08 2016 -0500
+
+    Made another .ocamlinit and fixed outof bounds error in shor
+
+ .ocamlinit                    |   5 +-
+ .ocamlinitKeshav              |  11 ++
+ _build/_digests               |  30 ++++
+ _build/_log                   |  32 ++++
+ _build/arithmetic.cmi         | Bin 0 -> 1094 bytes
+ _build/arithmetic.cmo         | Bin 0 -> 10834 bytes
+ _build/arithmetic.ml          |  57 +++++++
+ _build/arithmetic.ml.depends  |   1 +
+ _build/dillan_main.byte       | Bin 0 -> 1681033 bytes
+ _build/dillan_main.cmi        | Bin 0 -> 275 bytes
+ _build/dillan_main.cmo        | Bin 0 -> 1543 bytes
+ _build/dillan_main.ml         |   2 +
+ _build/dillan_main.ml.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 759 bytes
+ _build/gate.cmo               | Bin 0 -> 66581 bytes
+ _build/gate.ml                | 379 ++++++++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  54 ++++++
+ _build/gate.mli.depends       |   1 +
+ _build/keshav_main.byte       | Bin 0 -> 1726116 bytes
+ _build/keshav_main.cmi        | Bin 0 -> 1984 bytes
+ _build/keshav_main.cmo        | Bin 0 -> 50213 bytes
+ _build/keshav_main.ml         | 314 ++++++++++++++++++++++++++++++++++
+ _build/keshav_main.ml.depends |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/shor.byte              | Bin 0 -> 1736988 bytes
+ _build/shor.cmi               | Bin 0 -> 267 bytes
+ _build/shor.cmo               | Bin 0 -> 48658 bytes
+ _build/shor.ml                | 260 +++++++++++++++++++++++++++++
+ _build/shor.ml.depends        |   1 +
+ _build/shor.mli               |   7 +
+ _build/shor.mli.depends       |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 23988 bytes
+ _build/state.ml               | 132 +++++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 ++++++
+ _build/state.mli.depends      |   1 +
+ dillan_main.byte              |   1 +
+ gate.ml                       |   3 +-
+ keshav_main.byte              |   1 +
+ shor.byte                     |   1 +
+ state.ml                      |   2 +-
+ 43 files changed, 1350 insertions(+), 6 deletions(-)
+
+commit cc49f82764cebc0f20191a1d38a795ecade98919
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sun Nov 27 19:34:49 2016 -0500
+
+    Fixed normalization in state
+
+ .state.ml.swp                 | Bin 16384 -> 0 bytes
+ _build/_digests               |  16 --
+ _build/_log                   |  24 ---
+ _build/dillan_main.byte       | Bin 1681228 -> 0 bytes
+ _build/dillan_main.cmi        | Bin 275 -> 0 bytes
+ _build/dillan_main.cmo        | Bin 1574 -> 0 bytes
+ _build/dillan_main.ml         |   2 -
+ _build/dillan_main.ml.depends |   1 -
+ _build/gate.cmi               | Bin 759 -> 0 bytes
+ _build/gate.cmo               | Bin 66620 -> 0 bytes
+ _build/gate.ml                | 378 ------------------------------------------
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  54 ------
+ _build/gate.mli.depends       |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/state.cmi              | Bin 1173 -> 0 bytes
+ _build/state.cmo              | Bin 24118 -> 0 bytes
+ _build/state.ml               | 130 ---------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  55 ------
+ _build/state.mli.depends      |   1 -
+ dillan_main.byte              |   1 -
+ gate (copy).mli               |  53 ------
+ state.ml                      |  10 +-
+ 24 files changed, 6 insertions(+), 723 deletions(-)
+
+commit 3da3e63d9e834a3a7380c2332003d71963c82cc0
+Merge: 8566ef0 6e5b9a5
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sun Nov 27 19:33:15 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 6e5b9a5ea32fe9c7582dd77e349855b4a29ef0e4
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sun Nov 27 19:32:01 2016 -0500
+
+    Fixed .ocamlinit for shor
+
+ .ocamlinit | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 863036995a5b71e47d45a5df5560b69de369d1f4
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sun Nov 27 19:27:57 2016 -0500
+
+    Added shor .ocamlinit
+
+ .ocamlinit |  2 ++
+ shor.ml    | 10 +++++-----
+ 2 files changed, 7 insertions(+), 5 deletions(-)
+
+commit 8566ef0d7ead5b7b3be8b786208a07041762c774
+Merge: 51a0b73 4c5fb7a
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sun Nov 27 19:27:40 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 51a0b73ffcf5a461db3236bd5478aa86ace3bed9
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Sun Nov 27 19:27:19 2016 -0500
+
+    fixed normalization in State.make
+
+ .state.ml.swp                 | Bin 0 -> 16384 bytes
+ _build/_digests               |  16 ++
+ _build/_log                   |  24 +++
+ _build/dillan_main.byte       | Bin 0 -> 1681228 bytes
+ _build/dillan_main.cmi        | Bin 0 -> 275 bytes
+ _build/dillan_main.cmo        | Bin 0 -> 1574 bytes
+ _build/dillan_main.ml         |   2 +
+ _build/dillan_main.ml.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 759 bytes
+ _build/gate.cmo               | Bin 0 -> 66620 bytes
+ _build/gate.ml                | 378 ++++++++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  54 ++++++
+ _build/gate.mli.depends       |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 24118 bytes
+ _build/state.ml               | 130 +++++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 ++++++
+ _build/state.mli.depends      |   1 +
+ dillan_main.byte              |   1 +
+ gate (copy).mli               |  53 ++++++
+ gate.ml                       |   2 +-
+ state.ml                      |  43 +++--
+ 25 files changed, 740 insertions(+), 24 deletions(-)
+
+commit 4c5fb7aef23877f9d3d33df8141fa39459afe457
+Merge: 9763e3f 33bed40
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Sun Nov 27 19:14:58 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 9763e3f5296716a870e1ab8c3fad574b6b64139c
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Sun Nov 27 19:12:33 2016 -0500
+
+    Working main. Need to make it look better. May add some more features and improvve efficiency of saving.
+
+ .ocamlinit     |   3 +
+ keshav_main.ml | 227 +++++++++++++++++++++++++++++++++++++--------------------
+ 2 files changed, 150 insertions(+), 80 deletions(-)
+
+commit 33bed406af2e66f3bb43e2e18f7a2f2453e4e645
+Author: Ubuntu <ubuntu@csvm>
+Date:   Sun Nov 27 17:44:55 2016 -0500
+
+    Shor compiles. Needs to debug
+
+ Makefile      |   3 +
+ arithmetic.ml |  57 +++++++++++++
+ gate.ml       |   7 +-
+ shor.ml       | 259 ++++++++++++++++++++++++++++++++++++++++++++++++++--------
+ 4 files changed, 292 insertions(+), 34 deletions(-)
+
+commit 91310effbab76a8cc6c12f7258e7dc0c484ef001
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Sat Nov 26 10:53:50 2016 -0500
+
+    Need to figure out saving
+
+ Makefile       |   2 +-
+ keshav_main.ml | 209 +++++++++++++++++++++++++++++++++++++--------------------
+ 2 files changed, 139 insertions(+), 72 deletions(-)
+
+commit 6bfc0c3d2c4d5aded3f269d93f09789eeedebf7d
+Merge: b52abd6 a781a50
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Fri Nov 25 03:06:46 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit b52abd6678d58805890f71e2cde55b66983e271c
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Fri Nov 25 03:02:47 2016 -0500
+
+    Almost done with repl. Need to handle case for appplying circuit to a state. Also will make everything look better.
+
+ .DS_Store                     | Bin 0 -> 6148 bytes
+ _build/_digests               |  45 +++++---
+ _build/_log                   |  33 +++++-
+ _build/dillan_main.byte       | Bin 0 -> 1656662 bytes
+ _build/dillan_main.cmi        | Bin 0 -> 275 bytes
+ _build/dillan_main.cmo        | Bin 0 -> 1550 bytes
+ _build/dillan_main.ml         |   2 +
+ _build/dillan_main.ml.depends |   1 +
+ _build/gate.cmi               | Bin 584 -> 759 bytes
+ _build/gate.cmo               | Bin 2677 -> 42541 bytes
+ _build/gate.ml                | 262 ++++++++++++++++++++++++++++++++++++++++--
+ _build/gate.ml.depends        |   2 +-
+ _build/gate.mli               |  34 ++++--
+ _build/keshav_main.byte       | Bin 1426164 -> 0 bytes
+ _build/keshav_main.cmi        | Bin 328 -> 1308 bytes
+ _build/keshav_main.cmo        | Bin 3295 -> 25619 bytes
+ _build/keshav_main.ml         | 183 +++++++++++++++++++++++++++--
+ _build/keshav_main.ml.depends |   2 +-
+ _build/lexer.ml               | 240 ++++++++++++++++++++++++++++++++++++++
+ _build/lexer.ml.depends       |   1 +
+ _build/lexer.mll              |  37 ++++++
+ _build/parse.ml               |   5 +
+ _build/parse.ml.depends       |   1 +
+ _build/parser.mly             |  60 ++++++++++
+ _build/shor.cmi               | Bin 0 -> 267 bytes
+ _build/shor.mli               |   7 ++
+ _build/shor.mli.depends       |   1 +
+ _build/state.cmi              | Bin 899 -> 1173 bytes
+ _build/state.cmo              | Bin 21303 -> 22615 bytes
+ _build/state.ml               |  69 +++++------
+ _build/state.mli              |  31 +++--
+ ast.ml                        |  13 +++
+ dillan_main.byte              |   1 +
+ keshav_main.byte              |   1 -
+ keshav_main.ml                | 190 +++++++++++++++++++++++++++---
+ lexer.mll                     |  61 ----------
+ 36 files changed, 1107 insertions(+), 175 deletions(-)
+
+commit a781a500fcfa8af012f5a39e2b3ac0ffed3d649c
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 21:30:07 2016 -0500
+
+    Wrote part of shor
+
+ shor.ml | 36 +++++++++++++++++++++++++++---------
+ 1 file changed, 27 insertions(+), 9 deletions(-)
+
+commit a954145f551dbefc014b1cf646e1e5c9a5c445c6
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 21:05:45 2016 -0500
+
+    Finished QFT gates with controlled phase gates
+
+ _build/_digests               |  16 ++
+ _build/_log                   |  24 +++
+ _build/dillan_main.byte       | Bin 0 -> 1680979 bytes
+ _build/dillan_main.cmi        | Bin 0 -> 275 bytes
+ _build/dillan_main.cmo        | Bin 0 -> 1543 bytes
+ _build/dillan_main.ml         |   2 +
+ _build/dillan_main.ml.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 759 bytes
+ _build/gate.cmo               | Bin 0 -> 66479 bytes
+ _build/gate.ml                | 375 ++++++++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  54 ++++++
+ _build/gate.mli.depends       |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 24024 bytes
+ _build/state.ml               | 133 +++++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 +++++++
+ _build/state.mli.depends      |   1 +
+ dillan_main.byte              |   1 +
+ gate.ml                       |   3 +-
+ shor.ml                       |  19 ++-
+ 23 files changed, 677 insertions(+), 11 deletions(-)
+
+commit 809f77b8b30a1566e423f1b8f7ef2cdb6c88958c
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 20:21:10 2016 -0500
+
+    Implemented permute
+
+ gate.ml | 21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+
+commit 77800278a86eaa53bb2585265e66ad28ca47bd53
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 20:10:58 2016 -0500
+
+    Permute was wrong. Removed
+
+ gate.ml  | 4 +---
+ gate.mli | 1 +
+ shor.ml  | 2 ++
+ 3 files changed, 4 insertions(+), 3 deletions(-)
+
+commit 9c41fb79532ec5caab3269a77324c5eaaae8153b
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 20:08:18 2016 -0500
+
+    Fixed some specs and formatting
+
+ gate.ml  |  1 +
+ gate.mli | 16 ++++++++--------
+ 2 files changed, 9 insertions(+), 8 deletions(-)
+
+commit 4578a3c644a7d0788b6894677e941ed7b2b6fa78
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 20:03:57 2016 -0500
+
+    Made permute gate
+
+ _build/_digests               |  16 --
+ _build/_log                   |  24 ---
+ _build/dillan_main.byte       | Bin 1678797 -> 0 bytes
+ _build/dillan_main.cmi        | Bin 275 -> 0 bytes
+ _build/dillan_main.cmo        | Bin 1543 -> 0 bytes
+ _build/dillan_main.ml         |   2 -
+ _build/dillan_main.ml.depends |   1 -
+ _build/gate.cmi               | Bin 759 -> 0 bytes
+ _build/gate.cmo               | Bin 64162 -> 0 bytes
+ _build/gate.ml                | 360 ------------------------------------------
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  53 -------
+ _build/gate.mli.depends       |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/state.cmi              | Bin 1173 -> 0 bytes
+ _build/state.cmo              | Bin 24024 -> 0 bytes
+ _build/state.ml               | 133 ----------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  55 -------
+ _build/state.mli.depends      |   1 -
+ dillan_main.byte              |   1 -
+ 21 files changed, 650 deletions(-)
+
+commit c67228858c686c08fb0b724b70bbcddc7c70fdf7
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 20:03:45 2016 -0500
+
+    Made permute gate
+
+ _build/_digests               |  16 ++
+ _build/_log                   |  24 +++
+ _build/dillan_main.byte       | Bin 0 -> 1678797 bytes
+ _build/dillan_main.cmi        | Bin 0 -> 275 bytes
+ _build/dillan_main.cmo        | Bin 0 -> 1543 bytes
+ _build/dillan_main.ml         |   2 +
+ _build/dillan_main.ml.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 759 bytes
+ _build/gate.cmo               | Bin 0 -> 64162 bytes
+ _build/gate.ml                | 360 ++++++++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  53 +++++++
+ _build/gate.mli.depends       |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 24024 bytes
+ _build/state.ml               | 133 ++++++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 +++++++
+ _build/state.mli.depends      |   1 +
+ dillan_main.byte              |   1 +
+ gate.ml                       |  11 +-
+ 22 files changed, 659 insertions(+), 2 deletions(-)
+
+commit 8de9e2be090fb08f735a06f8dba3d4b48933bbc2
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 19:07:23 2016 -0500
+
+    implemented Uf for f(x)=b^x
+
+ _build/_digests               |  16 --
+ _build/_log                   |  24 ---
+ _build/dillan_main.byte       | Bin 1677770 -> 0 bytes
+ _build/dillan_main.cmi        | Bin 275 -> 0 bytes
+ _build/dillan_main.cmo        | Bin 1543 -> 0 bytes
+ _build/dillan_main.ml         |   2 -
+ _build/dillan_main.ml.depends |   1 -
+ _build/gate.cmi               | Bin 759 -> 0 bytes
+ _build/gate.cmo               | Bin 63120 -> 0 bytes
+ _build/gate.ml                | 353 ------------------------------------------
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  53 -------
+ _build/gate.mli.depends       |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/state.cmi              | Bin 1173 -> 0 bytes
+ _build/state.cmo              | Bin 24024 -> 0 bytes
+ _build/state.ml               | 133 ----------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  55 -------
+ _build/state.mli.depends      |   1 -
+ dillan_main.byte              |   1 -
+ 21 files changed, 643 deletions(-)
+
+commit 6c89a07b93d886e3262eb4efa1d56fe0df29b2d4
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 19:07:10 2016 -0500
+
+    implemented Uf for f(x)=b^x
+
+ _build/_digests         |  16 ++---
+ _build/_log             |  24 +++----
+ _build/dillan_main.byte | Bin 1673625 -> 1677770 bytes
+ _build/gate.cmo         | Bin 60335 -> 63120 bytes
+ _build/gate.ml          | 175 ++++++++++++++++++++++++++----------------------
+ _build/state.cmo        | Bin 22528 -> 24024 bytes
+ _build/state.ml         |  61 ++++++++++-------
+ gate.ml                 | 112 ++++++++++++++++++-------------
+ shor.ml                 |   6 +-
+ state.ml                |  47 ++++++-------
+ 10 files changed, 241 insertions(+), 200 deletions(-)
+
+commit 3fff17c2b390e83ae0bcef77038c6e6b0eb1f9c1
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 18:45:23 2016 -0500
+
+    fixed some indents
+
+ gate.ml | 147 +++++++++++++++++++++++++++++++---------------------------------
+ 1 file changed, 72 insertions(+), 75 deletions(-)
+
+commit cb9f8899fe54ae2bc1e24b71261f1e83777c4fc6
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 18:41:24 2016 -0500
+
+    Added Uf to gate and num precision to state
+
+ _build/_digests               |  16 ++
+ _build/_log                   |  24 +++
+ _build/dillan_main.byte       | Bin 0 -> 1673625 bytes
+ _build/dillan_main.cmi        | Bin 0 -> 275 bytes
+ _build/dillan_main.cmo        | Bin 0 -> 1543 bytes
+ _build/dillan_main.ml         |   2 +
+ _build/dillan_main.ml.depends |   1 +
+ _build/gate.cmi               | Bin 0 -> 759 bytes
+ _build/gate.cmo               | Bin 0 -> 60335 bytes
+ _build/gate.ml                | 340 ++++++++++++++++++++++++++++++++++++++++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  53 +++++++
+ _build/gate.mli.depends       |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/state.cmi              | Bin 0 -> 1173 bytes
+ _build/state.cmo              | Bin 0 -> 22528 bytes
+ _build/state.ml               | 124 +++++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  55 +++++++
+ _build/state.mli.depends      |   1 +
+ dillan_main.byte              |   1 +
+ gate_alex.ml                  | 340 ++++++++++++++++++++++++++++++++++++++++++
+ shor.ml                       |  42 ++++++
+ state.ml                      |  38 +++--
+ state_alex.ml                 | 132 ++++++++++++++++
+ state_alex.mli                |  55 +++++++
+ 26 files changed, 1213 insertions(+), 15 deletions(-)
+
+commit b24fa521689982f37f765bf5c243a0f9b79c26d6
+Merge: 3bbdc44 024f6fb
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 18:36:12 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 3bbdc44d02fdbf39d817fc349bb0ee29ad342218
+Author: Ubuntu <ubuntu@csvm>
+Date:   Thu Nov 24 17:59:41 2016 -0500
+
+    Added Uf for arbitrary f
+
+ gate.ml | 99 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 90 insertions(+), 9 deletions(-)
+
+commit 024f6fb2eedb7cc3d9e970609790345574513762
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Thu Nov 24 12:56:52 2016 -0500
+
+    fixed bug in adding and normalizing states
+
+ gate.ml          | 2 +-
+ keshav_main.byte | 1 -
+ state.ml         | 2 +-
+ state.mli        | 2 +-
+ 4 files changed, 3 insertions(+), 4 deletions(-)
+
+commit 7833ecad4bf0d5b6e3454dcf974e52e0355ef815
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Thu Nov 24 12:44:00 2016 -0500
+
+    Finished implementing adding in gates
+
+ _build/_digests               |  16 ------
+ _build/_log                   |   8 ---
+ _build/gate.cmi               | Bin 584 -> 0 bytes
+ _build/gate.cmo               | Bin 2677 -> 0 bytes
+ _build/gate.ml                |  13 -----
+ _build/gate.ml.depends        |   1 -
+ _build/gate.mli               |  41 --------------
+ _build/gate.mli.depends       |   1 -
+ _build/keshav_main.byte       | Bin 1426164 -> 0 bytes
+ _build/keshav_main.cmi        | Bin 328 -> 0 bytes
+ _build/keshav_main.cmo        | Bin 3295 -> 0 bytes
+ _build/keshav_main.ml         |  17 ------
+ _build/keshav_main.ml.depends |   1 -
+ _build/ocamlc.where           |   1 -
+ _build/state.cmi              | Bin 899 -> 0 bytes
+ _build/state.cmo              | Bin 21303 -> 0 bytes
+ _build/state.ml               | 121 ------------------------------------------
+ _build/state.ml.depends       |   1 -
+ _build/state.mli              |  44 ---------------
+ _build/state.mli.depends      |   1 -
+ 20 files changed, 266 deletions(-)
+
+commit 6b408abf8b6abb7ae2a59df98a5add1829612429
+Merge: 45ea541 bc61eba
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Thu Nov 24 12:42:58 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit 45ea5417b5314d73e75ecf6001d8876432651f08
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Thu Nov 24 12:41:07 2016 -0500
+
+    Finished implementing adding in gates
+
+ gate.ml | 40 ++++++++++++++++++++--------------------
+ 1 file changed, 20 insertions(+), 20 deletions(-)
+
+commit bc61eba097613f879e773c41042d9a22811291de
+Merge: ce52cba b3c1074
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Thu Nov 24 12:27:35 2016 -0500
+
+    Merge branch 'master' of https://github.coecis.cornell.edu/jc2379/QOCS
+
+commit ce52cbacdff76f83888ee1336550fd279805d66b
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Thu Nov 24 12:26:42 2016 -0500
+
+    Pushing to pull updates in state and gate
+
+ Makefile                      |   3 ++
+ _build/_digests               |  16 ++++++
+ _build/_log                   |   8 +++
+ _build/gate.cmi               | Bin 0 -> 584 bytes
+ _build/gate.cmo               | Bin 0 -> 2677 bytes
+ _build/gate.ml                |  13 +++++
+ _build/gate.ml.depends        |   1 +
+ _build/gate.mli               |  41 ++++++++++++++
+ _build/gate.mli.depends       |   1 +
+ _build/keshav_main.byte       | Bin 0 -> 1426164 bytes
+ _build/keshav_main.cmi        | Bin 0 -> 328 bytes
+ _build/keshav_main.cmo        | Bin 0 -> 3295 bytes
+ _build/keshav_main.ml         |  17 ++++++
+ _build/keshav_main.ml.depends |   1 +
+ _build/ocamlc.where           |   1 +
+ _build/state.cmi              | Bin 0 -> 899 bytes
+ _build/state.cmo              | Bin 0 -> 21303 bytes
+ _build/state.ml               | 121 ++++++++++++++++++++++++++++++++++++++++++
+ _build/state.ml.depends       |   1 +
+ _build/state.mli              |  44 +++++++++++++++
+ _build/state.mli.depends      |   1 +
+ keshav_main.byte              |   1 +
+ keshav_main.ml                |  24 +++++++++
+ lexer.mll                     |  61 +++++++++++++++++++++
+ 24 files changed, 355 insertions(+)
+
+commit b3c1074ddc20af959fd3e57e2480d04f4bde1fb5
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Thu Nov 24 12:24:29 2016 -0500
+
+    Added adding to gates
+
+ gate.ml   | 48 ++++++++++++++++++++++++------------------------
+ gate.mli  |  5 ++++-
+ state.mli |  4 ++--
+ 3 files changed, 30 insertions(+), 27 deletions(-)
+
+commit bc876b7db68afcd4539893a6d9e39c7b2bd2400c
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 23 23:44:31 2016 -0500
+
+    Changed gate.mli
+
+ gate.ml   | 50 +++++++++++++++++++++++++-------------------------
+ gate.mli  |  2 +-
+ state.ml  |  4 ++--
+ state.mli |  2 +-
+ 4 files changed, 29 insertions(+), 29 deletions(-)
+
+commit 8c1ad520ccddae3f7575ddbc344f03ac602fa099
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 23 23:19:06 2016 -0500
+
+    Finished state and gate
+
+ gate.ml | 35 ++++++++++++++++++++++++++---------
+ 1 file changed, 26 insertions(+), 9 deletions(-)
+
+commit f0c0d8bd75ab5ce2350a74ad271bbc76ecaf224a
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 23 22:15:25 2016 -0500
+
+    Fixed gate_of in gate so that we can separate between arguments
+
+ .ocamlinit |  11 ++---
+ Makefile   |   2 +-
+ gate.ml    | 135 ++++++++++++++++++++++++++++++++++++++++++++-----------------
+ gate.mli   |  20 ++++-----
+ state.ml   |   6 ++-
+ 5 files changed, 120 insertions(+), 54 deletions(-)
+
+commit f8da49427d24c7eb1e0f09a35ac64dc4052fada3
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 23 21:10:36 2016 -0500
+
+    Finished all gates but control
+
+ .ocamlinit |   7 ++--
+ gate.ml    | 120 +++++++++++++++++++++++++++++++++++++++++++------------------
+ state.ml   |  28 +++++++++++----
+ state.mli  |  15 ++++++--
+ 4 files changed, 126 insertions(+), 44 deletions(-)
+
+commit 78cda1ac4c8a78a4abb82ea444ef663d89ac3bec
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 23 19:21:33 2016 -0500
+
+    Added control to gate
+
+ dillan_main.ml |  2 +-
+ gate.ml        | 85 ++++++++++++++++++++++++++++++++++++++++++++++++----------
+ gate.mli       |  6 +++++
+ state.ml       | 22 +++------------
+ state.mli      | 14 +++++-----
+ 5 files changed, 89 insertions(+), 40 deletions(-)
+
+commit cc4c02fbe20ba507fee33e478e1957cd316e7d3b
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 23 18:19:54 2016 -0500
+
+    Changed specs for fundamental gates in Gate
+
+ gate.ml  | 67 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+ gate.mli |  5 ++++-
+ state.ml |  9 +++------
+ 3 files changed, 70 insertions(+), 11 deletions(-)
+
+commit f577b7b0b052503ae9b169fdfc0e865e8c7d5fea
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 23 15:19:49 2016 -0500
+
+    First fix of state.ml
+
+ .gate.mli.swp  | Bin 12288 -> 0 bytes
+ .ocamlinit     |   6 +-----
+ .state.mli.swp | Bin 12288 -> 0 bytes
+ state.ml       |   4 ++--
+ 4 files changed, 3 insertions(+), 7 deletions(-)
+
+commit 61f4e63d464c7975c01d951f38b8736ccd83d33c
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 23 15:09:16 2016 -0500
+
+    Finished states.ml
+
+ .gate.mli.swp  | Bin 0 -> 12288 bytes
+ .ocamlinit     |   6 +++
+ .state.ml.swp  | Bin 12288 -> 0 bytes
+ .state.mli.swp | Bin 12288 -> 12288 bytes
+ Makefile       |   2 +-
+ dillan_main.ml |   2 +
+ gate.ml        |   2 -
+ state.ml       | 123 ++++++++++++++++++++++++++++++++++++++++++++++++++-------
+ state.mli      |   6 ++-
+ 9 files changed, 121 insertions(+), 20 deletions(-)
+
+commit 2f9156669f628efc67fa94a6577704a225b99831
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Mon Nov 21 14:46:59 2016 -0500
+
+    Added more methods in state.mli and gate.mli
+
+ .gate.ml.swp   | Bin 12288 -> 0 bytes
+ .gate.mli.swp  | Bin 12288 -> 0 bytes
+ .state.ml.swp  | Bin 0 -> 12288 bytes
+ .state.mli.swp | Bin 0 -> 12288 bytes
+ gate.mli       |  28 ++++++++++++++++++++++------
+ state.ml       |  14 +++++++++++++-
+ state.mli      |  21 ++++++++++++++++++---
+ 7 files changed, 53 insertions(+), 10 deletions(-)
+
+commit 3332f1eddf644f711d2420d306c6c4e2c3e11754
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Mon Nov 21 13:39:10 2016 -0500
+
+    Fixed typos in gate and state mli, started gate and state ml.
+
+ _build/_digests          |  14 --------------
+ _build/_log              |  22 ----------------------
+ _build/gate.byte         | Bin 1428126 -> 0 bytes
+ _build/gate.cmi          | Bin 584 -> 0 bytes
+ _build/gate.cmo          | Bin 2725 -> 0 bytes
+ _build/gate.ml           |  15 ---------------
+ _build/gate.ml.depends   |   1 -
+ _build/gate.mli          |  25 -------------------------
+ _build/gate.mli.depends  |   1 -
+ _build/ocamlc.where      |   1 -
+ _build/state.byte        | Bin 1425647 -> 0 bytes
+ _build/state.cmi         | Bin 621 -> 0 bytes
+ _build/state.cmo         | Bin 2950 -> 0 bytes
+ _build/state.ml          |  16 ----------------
+ _build/state.ml.depends  |   1 -
+ _build/state.mli         |  27 ---------------------------
+ _build/state.mli.depends |   1 -
+ gate.byte                |   1 -
+ state.byte               |   1 -
+ 19 files changed, 126 deletions(-)
+
+commit 78ea4b011404c92ee6327c92367bd9b2404f409e
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Mon Nov 21 13:38:41 2016 -0500
+
+    Fixed typos in gate and state mli, started gate and state ml.
+
+ .gate.ml.swp             | Bin 0 -> 12288 bytes
+ .gate.mli.swp            | Bin 0 -> 12288 bytes
+ Makefile                 |   5 +++++
+ _build/_digests          |  14 ++++++++++++++
+ _build/_log              |  22 ++++++++++++++++++++++
+ _build/gate.byte         | Bin 0 -> 1428126 bytes
+ _build/gate.cmi          | Bin 0 -> 584 bytes
+ _build/gate.cmo          | Bin 0 -> 2725 bytes
+ _build/gate.ml           |  15 +++++++++++++++
+ _build/gate.ml.depends   |   1 +
+ _build/gate.mli          |  25 +++++++++++++++++++++++++
+ _build/gate.mli.depends  |   1 +
+ _build/ocamlc.where      |   1 +
+ _build/state.byte        | Bin 0 -> 1425647 bytes
+ _build/state.cmi         | Bin 0 -> 621 bytes
+ _build/state.cmo         | Bin 0 -> 2950 bytes
+ _build/state.ml          |  16 ++++++++++++++++
+ _build/state.ml.depends  |   1 +
+ _build/state.mli         |  27 +++++++++++++++++++++++++++
+ _build/state.mli.depends |   1 +
+ gate.byte                |   1 +
+ gate.ml                  |  15 +++++++++++++++
+ gate.mli                 |   8 ++++----
+ state.byte               |   1 +
+ state.ml                 |  16 ++++++++++++++++
+ state.mli                |   3 +--
+ 26 files changed, 167 insertions(+), 6 deletions(-)
+
+commit 65a9175ae87467f48c85ea30d8b2869f92cf3d27
+Author: Jae Young Chang <dillanchang@gmail.com>
+Date:   Wed Nov 16 11:42:04 2016 -0500
+
+    Added val_string to state.mli
+
+ state.mli | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit db64d8428727637a979ddaf07457c101f1267b38
+Author: Jae Young Chang <jc2379@cornell.edu>
+Date:   Tue Nov 15 10:27:12 2016 -0500
+
+    Modified gate.ml after meeting
+
+ gate.mli | 21 ++++++++++++---------
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+
+commit bf00348c39d101fa70a41857fef1009b5361b759
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Mon Nov 7 16:05:56 2016 -0500
+
+    Specs done for mli files.
+
+ gate.mli   | 11 +++++++++++
+ grover.mli |  6 +++++-
+ shor.mli   |  4 ++++
+ state.mli  | 16 +++++++++++++++-
+ 4 files changed, 35 insertions(+), 2 deletions(-)
+
+commit 2b26997d087bf3a664e88128cb8e70bc00f60ad1
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Sat Nov 5 15:31:00 2016 -0400
+
+    Intitial commit of mli files
+
+ gate.mli   | 11 +++++++++++
+ grover.mli |  2 ++
+ shor.mli   |  3 +++
+ state.mli  | 11 +++++++++++
+ 4 files changed, 27 insertions(+)
+
+commit b0f101e47174c0d036cfd030f491e6644033f6f1
+Author: Jae Young Chang <jc2379@cornell.edu>
+Date:   Tue Oct 18 17:47:00 2016 -0400
+
+    Update README.md
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c2e9b75507ee0e0587de594741d006a4eec7ffe1
+Author: Jae Young Chang <jc2379@cornell.edu>
+Date:   Tue Oct 18 17:45:53 2016 -0400
+
+    Create README.md
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit f78dfb112b922ec879a7c373ad6382cf295ebabe
+Author: Jae Young Chang <jc2379@cornell.edu>
+Date:   Tue Oct 18 17:45:40 2016 -0400
+
+    Delete README.md
+
+ README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ff98c1c64110b2326d7051d272db49d5ccc1eb74
+Author: Jae Young Chang <jc2379@cornell.edu>
+Date:   Tue Oct 18 17:19:20 2016 -0400
+
+    Deleted contents of charter
+
+ .DS_Store                | Bin 6148 -> 0 bytes
+ charter/.DS_Store        | Bin 6148 -> 0 bytes
+ charter/.charter.tex.swp | Bin 12288 -> 0 bytes
+ charter/charter.aux      |   5 -
+ charter/charter.log      | 596 -----------------------------------------------
+ charter/charter.pdf      | Bin 32790 -> 0 bytes
+ charter/charter.tex      |  25 --
+ template.txt             |  36 ---
+ 8 files changed, 662 deletions(-)
+
+commit 9707235db4bdb91515abd89302249def9ad4ceca
+Author: Keshav Iyer <ki79@cornell.edu>
+Date:   Tue Oct 18 17:11:32 2016 -0400
+
+    Committing LaTeX template
+
+ .DS_Store         | Bin 0 -> 6148 bytes
+ charter/.DS_Store | Bin 0 -> 6148 bytes
+ template.txt      |  36 ++++++++++++++++++++++++++++++++++++
+ 3 files changed, 36 insertions(+)
+
+commit 88df83d71537e9c19ac4f797c007a53287ca631a
+Author: Jae Young Chang <jc2379@cornell.edu>
+Date:   Tue Oct 18 17:04:19 2016 -0400
+
+    Started Charter
+
+ charter/.charter.tex.swp | Bin 0 -> 12288 bytes
+ charter/charter.aux      |   5 +
+ charter/charter.log      | 596 +++++++++++++++++++++++++++++++++++++++++++++++
+ charter/charter.pdf      | Bin 0 -> 32790 bytes
+ charter/charter.tex      |  25 ++
+ 5 files changed, 626 insertions(+)
+
+commit 390cc41bbc458c133472813de65ae1f5541ddaf1
+Author: Jae Young Chang <jc2379@cornell.edu>
+Date:   Tue Oct 18 16:57:51 2016 -0400
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
