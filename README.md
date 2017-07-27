@@ -65,7 +65,7 @@ Architecture
 ============
 
 ![Component and connector diagram for QOCS<span
-data-label="fig:cc"></span>](QOCS_CC_Diagram.PNG){width="75.00000%"}
+data-label="fig:cc"></span>](./images/QOCS_CC_Diagram.PNG){width="75.00000%"}
 
 QOCS will be a pipe and filter system as shown in \[fig:cc\]. Upon
 startup, the program will process user input into two possible pipes;
@@ -87,7 +87,7 @@ System and Module Design
 ========================
 
 ![Module dependency diagram for QOCS.<span
-data-label="fig:mdd"></span>](QOCS_MDD_Diagram.PNG){width="75.00000%"}
+data-label="fig:mdd"></span>](./images/QOCS_MDD_Diagram.PNG){width="75.00000%"}
 
 Our project has 5 modules, including the main module. Their dependency
 is visualized in \[fig:mdd\]. Here is a brief summary of the purpose of
