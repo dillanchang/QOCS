@@ -131,7 +131,7 @@ Architecture
 ============
 
 ![Component and connector diagram for QOCS<span
-data-label="fig:cc"></span>](./images/QOCS_CC_Diagram.PNG){width="75.00000%"}
+data-label="fig:cc"></span>](./images/QOCS_CC_Diagram.PNG)
 
 QOCS will be a pipe and filter system as shown in \[fig:cc\]. Upon
 startup, the program will process user input into two possible pipes;
@@ -153,7 +153,7 @@ System and Module Design
 ========================
 
 ![Module dependency diagram for QOCS.<span
-data-label="fig:mdd"></span>](./images/QOCS_MDD_Diagram.PNG){width="75.00000%"}
+data-label="fig:mdd"></span>](./images/QOCS_MDD_Diagram.PNG)
 
 Our project has 5 modules, including the main module. Their dependency
 is visualized in \[fig:mdd\]. Here is a brief summary of the purpose of
@@ -357,7 +357,7 @@ Bugs
 Division of Labor
 =================
 
-Alex {#alex .unnumbered}
+Alex 
 ----
 
 Implemented Shor and Arithmetic module. The former contains Shor’s
@@ -367,7 +367,7 @@ factoring products of distinct primes. The latter contains functions
 necessary for performing base $n<10$ arithmetic. Also implemented the
 non-elementary quantum gate $U_f$ in State necessary for period finding.
 
-Dillan {#dillan .unnumbered}
+Dillan
 ------
 
 Implemented Gate and State modules, which become the back-end modules
@@ -375,7 +375,7 @@ for calculating qubit states and passing states through gates. Other
 modules like Shor rely on Gate and State in order to perform the
 necessary calculations.
 
-Keshav {#keshav .unnumbered}
+Keshav
 ------
 
 Implemented Main module. This module runs the REPL and all actions
