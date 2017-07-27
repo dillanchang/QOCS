@@ -367,7 +367,7 @@ let rec repl cm : unit =
       "c) Type Q to quit \n");
     linegap ();  
     input_line ();
-    command := read_line () |> String.uppercase_ascii |> String.trim;
+    command := read_line () |> String.uppercase |> String.trim;
     linegap ())
   else ()); 
   match !command with
@@ -377,7 +377,7 @@ let rec repl cm : unit =
         "Y: yes\n" ^ "N: no");
       linegap ();
       input_line ();
-      let answer = read_line () |> String.uppercase_ascii |> String.trim in 
+      let answer = read_line () |> String.uppercase |> String.trim in 
       linegap ();
       (if answer = "Y" || answer = "YES" 
       then 
@@ -429,7 +429,7 @@ and repl_qcs () : unit =
     "c) Type Q to exit this mode");
   linegap ();
   input_line ();
-  let com = read_line () |> String.uppercase_ascii |> String.trim in
+  let com = read_line () |> String.uppercase |> String.trim in
   linegap ();
   match com with
   | "C" -> get_gate_format (); repl_circuit (gate_of "I")
@@ -449,7 +449,7 @@ and repl_circuit curr : unit =
     "d) Enter F to view format for inputting gates.");
   linegap ();
   input_line ();
-  let com = read_line () |> String.uppercase_ascii |> String.trim in 
+  let com = read_line () |> String.uppercase |> String.trim in 
   linegap ();
   match com with
   | "SAVE" -> 
@@ -461,7 +461,7 @@ and repl_circuit curr : unit =
         repl_circuit curr)
       else 
         print_string "Enter name of circuit you wish to save: ";
-        let name = read_line () |> String.uppercase_ascii |> String.trim in 
+        let name = read_line () |> String.uppercase |> String.trim in 
         linegap ();
         (if List.mem_assoc name !files 
         then 
@@ -504,7 +504,7 @@ and repl_apply () : unit =
       "available circuits or Q to quit this mode:");
     linegap ();
     input_line ();
-    let com = read_line () |> String.uppercase_ascii |> String.trim in 
+    let com = read_line () |> String.uppercase |> String.trim in 
     linegap ();
     if com = "Q" || com = "QUIT" 
     then repl_qcs ()
